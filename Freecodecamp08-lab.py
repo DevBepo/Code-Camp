@@ -1,9 +1,13 @@
 def number_pattern(n):
     if not isinstance(n, int):
         return 'Argument must be an integer value.'
+    if n < 0:
+        return 'Argument must be an integer greater than 0'
+    
     sequence = []
+    
     for number in range(1, n + 1):
         sequence.append(str(number))
-    return ' '.join(sequence)
+    return ' '.join(sequence)      
 
 print(number_pattern(4))
